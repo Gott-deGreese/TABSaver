@@ -1,0 +1,72 @@
+object FMain: TFMain
+  Left = 788
+  Height = 230
+  Top = 429
+  Width = 383
+  BorderStyle = bsDialog
+  Caption = 'File sync'
+  ClientHeight = 230
+  ClientWidth = 383
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  LCLVersion = '3.0.0.3'
+  object EDirName: TEdit
+    Left = 8
+    Height = 21
+    Top = 8
+    Width = 276
+    TabOrder = 0
+  end
+  object BDirName: TButton
+    Left = 288
+    Height = 22
+    Top = 7
+    Width = 91
+    Caption = 'Select dir'
+    TabOrder = 1
+    OnClick = BDirNameClick
+  end
+  object LBFiles: TListBox
+    Left = 8
+    Height = 184
+    Top = 40
+    Width = 276
+    ItemHeight = 0
+    Sorted = True
+    TabOrder = 2
+  end
+  object BSave: TButton
+    Left = 288
+    Height = 25
+    Top = 40
+    Width = 91
+    Caption = 'Save (Alt+S)'
+    TabOrder = 3
+    OnClick = BSaveClick
+  end
+  object BRestore: TButton
+    Left = 288
+    Height = 25
+    Top = 72
+    Width = 91
+    Caption = 'Restore (Alt+R)'
+    TabOrder = 4
+    OnClick = BRestoreClick
+  end
+  object BDel: TButton
+    Left = 288
+    Height = 25
+    Top = 200
+    Width = 91
+    Caption = 'Delete'
+    Font.Color = clRed
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    OnClick = BDelClick
+  end
+  object SDDMain: TSelectDirectoryDialog
+    Left = 16
+    Top = 48
+  end
+end
